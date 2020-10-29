@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="header-wrapper">
+            <!--Top right links from CMS Block ID 'header_right_panel_links'-->
+            <block class="Magento\Framework\View\Element\Template" name="header_center_marketing_panel"
+                   template="Magento_Theme::header_center_marketing.phtml" after="logo">
+            </block>
+        </referenceContainer>
+
+
+        <referenceBlock name="logo">
+            <arguments>
+                <!--  <argument name="logo_file" xsi:type="string">images/HosLogo.png</argument>-->
+                <argument name="logo_img_width" xsi:type="number">260</argument>
+                <argument name="logo_img_height" xsi:type="string">auto</argument>
+            </arguments>
+        </referenceBlock>
+
+
+        <referenceContainer name="header.panel">
+            <!--Top right links from CMS Block ID 'header_right_panel_links'-->
+            <block class="Magento\Framework\View\Element\Template" name="right_panel_links"
+                   template="Magento_Theme::header_right_links.phtml" before="header.content">
+            </block>
+            <block class="Magento\Theme\Block\Html\Header" name="header.content"
+                   template="Magento_Theme::html/header.phtml">
+                <container name="toplinks-header" label="Header Links" as="toplinks-header" htmlTag="div"
+                           htmlClass="toplinks-wrapper">
+                    <block class="Magento\Framework\View\Element\Html\Links" name="top.links">
+                        <arguments>
+                            <argument name="css_class" xsi:type="string">header links</argument>
+                        </arguments>
+                    </block>
+                </container>
+            </block>
+            <!--Top left links from CMS Block ID 'header_left_panel_links'-->
+            <block class="Magento\Framework\View\Element\Template" name="left_panel_links"
+                   template="Magento_Theme::header_left_links.phtml" after="top.links">
+            </block>
+        </referenceContainer>
+
+
+        <referenceContainer name="footer">
+            <block class="Magento\Framework\View\Element\Template" name="footer_left_links"
+                   template="Magento_Theme::html/footer_left_links.phtml" after="footer_links">
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="footer_center_links"
+                   template="Magento_Theme::html/footer_center.phtml">
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="footer_right_links"
+                   template="Magento_Theme::html/footer_right_links.phtml">
+            </block>
+        </referenceContainer>
+    <referenceBlock name="footer_links" remove="true"/>
+    <referenceBlock name="form.subscribe"  remove="true"/>
+    <referenceBlock name="store_switcher"  remove="true"/>
+
+    </body>
+</page>

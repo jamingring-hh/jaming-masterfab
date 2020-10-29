@@ -1,0 +1,13 @@
+<div class="footer-left-links">
+	<h2>Important Pages</h2>
+	<?php
+	$html = $this->getLayout()
+		->createBlock('Magento\Cms\Block\Block')
+		->setBlockId('footer_left_links')
+		->toHtml();
+	//I've added this incase there are any issue with missing or renamed blocks
+	if ($html) {
+		echo $html;
+	}
+	?>
+</div>

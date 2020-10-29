@@ -1,0 +1,12 @@
+<div class="header-panel-left-links">
+	<?php
+	$html = $this->getLayout()
+		->createBlock('Magento\Cms\Block\Block')
+		->setBlockId('header_left_panel_links')
+		->toHtml();
+	//I've added this incase there are any issue iwth missing or renamed blocks
+	if ($html) {
+		echo $html;
+	}
+	?>
+</div>

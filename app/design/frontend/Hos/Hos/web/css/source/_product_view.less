@@ -1,0 +1,124 @@
+
+
+/* Product Pages */
+.fotorama__thumb-border {
+  border: 1px solid @hos-red-color;
+}
+
+.product-info-main .product.attribute.overview {
+  display: none;
+}
+
+.product-info-main .product-info-stock-sku{
+  padding-left: unset;
+}
+
+body.page-product-luxury:not([aria-busy="false"]) .action.primary.customize,
+body.page-product-luxury:not(.amsl-popup-observed) .action.primary.customize {
+  opacity: 0.4;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body.page-product-luxury.amsl-popup-observed.ajax-loading .action.primary.customize {
+  position: relative;
+
+  &::before {
+    content: 'Adding to Cart...';
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+
+  > span {
+    opacity: 0;
+  }
+}
+
+/* Grouped Product */
+
+
+/* Tiered Pricing styles */
+ul.prices-tier li:nth-child(2n) {
+  background-color: @hos-light-grey;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+ul.prices-tier li:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.row-tier-price td{
+  padding: 0;
+}
+
+ul.prices-tier .item {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+tr.row-title{
+  background-color: @hos-light-grey;
+  border-bottom: 1px solid #ccc;
+}
+
+tr.row-title h3 {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+  font-size: x-large;
+}
+/* End Tiered Pricing styles */
+
+.estimatedDeliveryDate {
+  text-align: center;
+}
+
+/* Product Image Slider */
+.fotorama__wrap--css3 {
+  &.fotorama__wrap--no-controls.fotorama__wrap--slide.fotorama__wrap--toggle-arrows {
+    .fotorama__arr,
+    .fotorama__arr--prev:not(:focus),
+    .fotorama__arr--next:not(:focus) {
+      transform: none;
+    }
+  }
+  .fotorama__arr {
+    width: 110px;
+    transform: none;
+  }
+
+  .fotorama__arr--prev {
+    background: linear-gradient(to left, transparent 0%, #c3c3c3);
+  }
+
+  .fotorama__arr--next {
+    background: linear-gradient(to right, transparent 0%, #c3c3c3);
+  }
+}
+
+.fotorama__arr {
+  .fotorama__arr__arr {
+    transform: translateY(-50%);
+  }
+  
+  &.fotorama__arr--prev {
+    .fotorama__arr__arr {
+      left: -8px;
+      right: auto;
+    }
+  }
+
+  &.fotorama__arr--next {
+    .fotorama__arr__arr {
+      left: auto;
+      right: -8px;
+    }
+  }
+}

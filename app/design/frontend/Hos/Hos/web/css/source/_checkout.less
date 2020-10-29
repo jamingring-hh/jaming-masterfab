@@ -1,0 +1,40 @@
+/*
+ * @author Jason Ratzlaff
+ * @email jasonratz@gmail.com
+ * @copyright Copyright (c) 2020.  Houseofstaunton (https://www.houseofstaunton.com)
+ * @package Hos 2.3
+ */
+
+.checkout-index-index {
+    .opc-wrapper.am-opc-wrapper {
+        .checkout-shipping-method .step-content::before {
+            content: "Clearance, Imperfect & Shopworn items are not eligible for Free Shipping";
+            display: block;
+            padding: 6px 12px 6px 16px;
+            line-height: 1.1em;
+            color: @hos-white-text;
+            margin-bottom: 12px !important;
+            text-align: center !important;
+            font-weight: 700;
+            font-size: 1.3em;
+            position: relative;
+            background: @hos-red-color !important;
+        }
+
+        .checkout-payment-method {
+            .payment-option._collapsible.opc-payment-additional.discount-code::before {
+                content: "Coupons do not apply to Clearance, Imperfect, Shopworn items or those marked as 'no coupons allowed'.";
+                display: block;
+                padding: 6px 12px 6px 16px;
+                line-height: 1.1em;
+                color: @hos-white-text;
+                margin-bottom: 12px !important;
+                text-align: center !important;
+                font-weight: 700;
+                font-size: 1.3em;
+                position: relative;
+                background: @hos-red-color !important;
+            }
+        }
+    }
+}

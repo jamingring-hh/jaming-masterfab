@@ -1,0 +1,16 @@
+
+        .consolidationTextAlignment { display: inline !important; }
+        .desktopDontShiftIconLeft { margin-left: 0px; }
+        .amazonImageWidth { width: 135px; }
+        .emailBody {
+            width: 640px !important;
+            text-align:center !important;
+            background-image: url('') !important;
+            background-color: #fafafa !important;
+        }
+        .greetingAndEta { width: 317px !important; max-width: 317px !important; }
+        .container { width: 530px !important; max-width: 530px !important; }
+        .trackPackageButton { width: 317px !important; max-width: 317px !important; }
+        .conditionalCenter { text-align:center !important; }
+        .conditionalLeft { text-align:left !important; }
+        .greetingText { text-al

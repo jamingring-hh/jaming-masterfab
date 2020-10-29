@@ -1,0 +1,12 @@
+<div class="footer-center-links">
+	<?php
+	$html = $this->getLayout()
+		->createBlock('Magento\Cms\Block\Block')
+		->setBlockId('footer_center_links')
+		->toHtml();
+	//I've added this incase there are any issue with missing or renamed blocks
+	if ($html) {
+		echo $html;
+	}
+	?>
+</div>
