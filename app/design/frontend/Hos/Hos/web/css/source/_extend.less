@@ -61,6 +61,104 @@ h5 {
   font-family: "Marcellus SC",serif;
 }
 
+.page-header {
+  background: #d7d7d7;
+
+  .header.content {
+    padding: 10px 20px;
+  }
+
+  a.logo {
+    margin: 0;
+    display: inline-block;
+    width: 40%;
+
+    img {
+      height: 80px;
+      width: auto;
+    }
+  }
+
+  .minicart-wrapper {
+    margin-top: 13px;
+    margin-left: 5vw;
+
+    .action.showcart::before {
+      font-size: 30px;
+      background: #888888;
+      color: #fff !important;
+      padding: 12px;
+      border-radius: 7px;
+      text-shadow: 3px 3px 5px #000;
+    }
+
+    .action.showcart .counter.qty {
+      position: absolute;
+      top: 5px;
+      right: 15px;
+      border-radius: 50%;
+      font-size: 12px;
+      padding: 1px;
+      line-height: 18px;
+      width: 15px;
+      height: 18px;
+      margin: 0;
+    }
+  }
+
+  .block-search {
+    margin-top: 22px;
+    box-shadow: 5px 5px 11px #737373;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 26vw;
+
+    input {
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      height: 38px;
+      padding-left: 12px;
+    }
+
+    .action.search.disabled,
+    .action.search[disabled],
+    .action.search {
+      right: 6px;
+      top: 4px;
+    }
+
+    .action.search::before {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+}
+
+.nav-sections {
+  margin-bottom: 0;
+
+  .nav-sections-item-content {
+    background: #000;
+
+    > .navigation {
+      background: #000;
+    }
+  }
+
+  .navigation {
+    ul {
+      text-align: right;
+    }
+
+    .level0 > .level-top {
+      color: #fff;
+      font-style: italic;
+      font-weight: bold;
+    }
+  }
+}
 
 .page-header .panel.wrapper {
   background-color: @hos-red-color;
@@ -89,12 +187,6 @@ h5 {
 .columns .column.main{
   padding-bottom: 0;
 }
-
-
-.nav-sections {
-  margin-bottom: 0;
-}
-
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
   .row-full-width-inner{
